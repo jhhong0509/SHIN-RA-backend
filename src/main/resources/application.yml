@@ -1,0 +1,23 @@
+auth:
+  jwt:
+    secret: ${SHINRA_SECRET}
+    header: ${JWT_HEADER}
+    prefix: ${JWT_PREFIX}
+    exp:
+      access: ${JWT_ACCESS_TOKEN_EXP}
+      refresh: ${JWT_REFRESH_TOKEN_EXP}
+spring:
+  redis:
+    port: 6379
+    host: localhost
+  jpa:
+    generate-ddl: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${SHINRA_DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+server:
+  socket:
+    port: 3000
+  port: 8083
