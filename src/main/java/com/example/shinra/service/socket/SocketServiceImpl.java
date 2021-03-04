@@ -65,7 +65,6 @@ public class SocketServiceImpl implements SocketService {
         User user = client.get("user");
         boolean isMine = false;
         for(String name : request.getRoom().split(":")) {
-            System.out.println("이름: "+ name);
             if(name.equals(user.getEmail())) {
                 isMine = true;
             }
